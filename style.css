@@ -25,7 +25,36 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 50px;
+}
+
+ .side-bar-button{
+  display: flex;
+  width: 100%;              /* makes icon + text align in a flex container */
+  flex-direction: column;     /* stacks icon on top of text */
+  align-items: center;        /* centers icon and text horizontally */
+  border: none;
+  cursor: pointer;
+  height: 64px;
+  transition: background 0.2s;
+}
+.side-bar-button:hover {
+    background-color: aqua;
+}
+
+.main-nav-button, .options-button {
+  display: flex;
+  flex-direction: column;     /* stacks icon on top of text */
+  align-items: center;        /* centers icon and text horizontally */
+  justify-content: center;    /* optional: center vertically if button is taller */
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  width: 100px;
+}
+
+.main-nav-button:hover, .options-button:hover {
+    background-color: aqua;
+
 }
 
 #options {
@@ -33,7 +62,6 @@ body {
     background-color: rgb(230, 230, 230);
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 #search-area {
@@ -41,34 +69,49 @@ body {
     background-color: white;
     display: flex;
 }
+
 #product-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    height: 100px;
-    width: 50px;
+    height: 100%;
+    width: 150px;
 }
 
 #product-image {
+    background-color: white;
+    height: 85%;
+    width: 70%;
+    border: 1px solid black;   /* Inner border */
+    position: relative;
+    box-shadow: 0 0 0 7px white, /* gap color (white) */
+                0 0 0 8px black; /* outer border */
+    }
 
-    background-color: purple;
-    height: 50px;
-    width: 30px;
-}
 #search-container {
     flex-grow: 1;
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
 }
 
+#search-bar-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
+#client-container {
+    display: grid;
+    grid-template-columns: repeat(9,1fr); ;
+    grid-template-rows: 1fr 1fr;
+}
 
 #side-bar {
     grid-area: side-bar;
     background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
-    gap: 40px;
     align-items: center;
 }
 
