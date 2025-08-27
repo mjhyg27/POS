@@ -128,21 +128,25 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
                         </svg>
                     </button>
-                    <div>date icon</div>
-                    <div>date</div>
+                    <div class="date icon">date icon</div>
+                    <div class="date">date</div>
                 </div>
                 <div id="client-container">
-                    <div id="doc-icon">doc icon</div>
-                    <div id="doc-selection">doc selection</div>
-                    <div id="client-icon">client icon</div>
-                    <div id="client-selector">client select</div>
-                    <div id="clerk-icon">clerk icon</div>
-                    <div>clerk select</div>
-                    <div>money icon</div>
-                    <div>currency</div>
-                    <div>conversion icon</div>
-                    <div>conversion rate</div>
-                    <div>remove button</div>
+                    <div id="doc-container">
+                        <div id="doc-icon">doc icon</div>
+                        <div id="doc-selection">doc selection</div>
+                        <div >money icon</div>
+                        <div>currency</div>
+                        <div>conversion icon</div>
+                        <div>conversion rate</div>
+                    </div>
+                    <div id="clerk-container">
+                        <div id="client-icon">client icon</div>
+                        <div id="client-selector">client select</div>
+                        <div id="clerk-icon">clerk icon</div>
+                        <div>clerk select</div>
+                        <div>remove button</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +188,7 @@
             </button>
         </div>
 
-        <div id="sale-info">
+        <div id="sale-details-container">
             <div class="sale-details">Cant</div>
             <div class="sale-details">Descripcion</div>
             <div class="sale-details">Exis</div>
@@ -193,13 +197,20 @@
             <div class="sale-details">Importe</div>
         </div>
 
-        <main id="sale-items">sale items
-            <div class="item">item</div>
+        <main id="sale-items-container">
+            <div class="item-container">
+                <div class="right-item">item</div>
+                <div class="left-item">item</div>
+                <div class="right-item">item</div>
+                <div class="right-item">item</div>
+                <div class="right-item">item</div>
+                <div class="right-item">item</div>
+            </div>
         </main>
-
+        
         <div id="subtotal">subtotal </div>
 
-        <footer id="total">total</footer>
+        <footer id="total">Total: $0.00 MXN</footer>
     </div>
 </body>
 </html>

@@ -54,7 +54,6 @@ body {
 
 .main-nav-button:hover, .options-button:hover {
     background-color: aqua;
-
 }
 
 #options {
@@ -89,23 +88,47 @@ body {
     }
 
 #search-container {
-    flex-grow: 1;
-    background-color: aqua;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 #search-bar-container {
     display: flex;
+    height: 40%;
+    align-items: center;
     flex-direction: row;
     gap: 10px;
+    border-bottom: 1px solid gray;
 }
 
 #client-container {
-    display: grid;
-    grid-template-columns: repeat(9,1fr); ;
-    grid-template-rows: 1fr 1fr;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
+#doc-container {
+    display: flex;
+    background-color: red;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    gap: 20px;
+}
+
+#clerk-container {
+    background-color: aquamarine;
+    gap: 20px;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.date.icon {
+    margin-left: 62%;
+}
+
 
 #side-bar {
     grid-area: side-bar;
@@ -115,26 +138,47 @@ body {
     align-items: center;
 }
 
-#sale-info {
+#sale-details-container {
     grid-area: sale-info;
     background-color: rgb(128, 124, 124);
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-#sale-info,
-#sale-items {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr; /* 6 columns */
     gap: 5px; /* optional spacing */
-    padding: 5px;
+}
+.sale-details {
+    border-right: white 1px solid;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center text vertically inside the div */
 }
 
-#sale-items {
+#sale-items-container {
     grid-area: sale-items;
     background-color: white;
     border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+.right-item {
+    width: 100%;
+    height: 2.5rem;
+    margin-left: auto;
+    border-bottom: solid gray 1px;
+    border-right: solid gray 1px;
+}
+.left-item {
+    width: 100%;
+    height: 2.5rem;
+    border-bottom: solid gray 1px;
+    border-right: solid gray 1px;
+    margin-right: auto;
+}
+.item-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr; /* 6 columns */
+    gap: 5px; /* optional spacing */
 }
 #subtotal {
     grid-area: subtotal;
@@ -144,5 +188,7 @@ body {
 #total {
     grid-area: total;
     background-color:rgb(128, 124, 124);
+    width: 100%;
+    text-align: right;
 }
 
